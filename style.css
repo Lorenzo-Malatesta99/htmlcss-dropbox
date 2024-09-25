@@ -1,0 +1,52 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: currentColor;
+	text-decoration: none;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+/* LAYOUT */
+.container {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.container-sm {
+	max-width: 720px;
+	margin: 0 auto;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+/* Navbar */
+
+
+header{
+    background-color: white;
+}
+
+.container-full{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row-nav{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
