@@ -11,25 +11,32 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/d5c21fc1cb.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/d5c21fc1cb.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
-      <nav class="container-full">
-        <ul class="row-nav">
-          <li>
-            <a href="#"><img src="./img/logo-small.png" alt="logo" /></a>
-          </li>
-          <li><a href="#">Perchè Dropbox</a></li>
-          <li><a href="#">Funzioni</a></li>
-          <li><a href="#">Piani e Prezzi</a></li>
-        </ul>
-        <ul class="row-nav">
-          <li><a href="#">Supporto</a></li>
-          <li><a href="#">Contatta l'ufficio vendite</a></li>
-          <li><a href="#">Accedi</a></li>
-          <li><button class="def-buttons">Inizia</button></li>
-        </ul>
+      <nav class="container-fluid navbar">
+        <div class="row no-gutter">
+          <ul class="menu">
+            <li>
+              <a class="logo-wrapper" href="#"
+                ><img src="./img/logo-small.png" alt="logo"
+              /></a>
+            </li>
+            <li><a href="#">Perchè Dropbox</a></li>
+            <li><a href="#">Funzioni</a></li>
+            <li><a href="#">Piani e Prezzi</a></li>
+          </ul>
+          <ul class="menu">
+            <li><a href="#">Supporto</a></li>
+            <li><a href="#">Contatta l'ufficio vendite</a></li>
+            <li><a href="#">Accedi</a></li>
+            <li><button class="btn btn--sm">Inizia</button></li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main>
@@ -37,73 +44,175 @@
         <div class="container">
           <div class="row">
             <div class="col-100">
-              <h1 class="title">
+              <h1 class="hero__title">
                 Tutto ciò che ti serve per il lavoro in un unico posto
               </h1>
             </div>
-            <div class="col-33 text-1">
+          <div class="row">
+            <div class="col-33 hero__content">
               <p>
                 Finalmente tutti i tuoi strumenti, contenuti e collaboratori
                 sono acessibili dallo stesso posto. Dropbox Business è più di
                 uno spazio di archiviazione sicuro: è un modo intelligente e
                 integrato per ottimizzare il flusso di lavoro esistente.
               </p>
-              <button class="def-buttons">Inizia la tua prova gratuita</button>
+              <a class="btn" href="#">Inizia la tua prova gratuita</a>
               <p>Annulla in qualsiasi momento</p>
-              <div class="arrow"><i class="fa-solid fa-arrow-down"></i></i></div>
+              <span class="hero__icon">
+                <i class="fa-solid fa-arrow-down"></i>
+              </span>
             </div>
             <div class="col-66">
-              <figure>
-                <img class="img-hero" src="./img/jumbo.png" alt="" />
-              </figure>
+                <img class="hero__image" src="./img/jumbo.png" alt="img hero" />
             </div>
           </div>
         </div>
       </section>
 
-      <section>
-        <div class="container special">
-            <div class="row">
-                <div class="col-100">
-                    <h2 class="title-2">Trova il piano business che fa per te</h2>
+      <section class="plans">
+				<div class="container-sm">
+					<div class="row">
+						<div class="col-100">
+							<h2>Trova il piano business che fa per te</h2>
+
+							<div class="toggle-actions">
+								<div>
+									<input id="monthly" checked type="radio" name="bill-rate" />
+									<label for="monthly">Fatturazione mensile</label>
+								</div>
+								<div>
+									<input id="yearly" type="radio" name="bill-rate" />
+									<label for="yearly">Fatturazione Annuale</label>
+								</div>
+							</div>
+						</div>
+					</div>
+          <!-- PRIMA card -->
+					<ul class="row">
+						<li class="col-33">
+							<div class="card">
+								<div class="card__header"><i class="fa-solid fa-user"></i> Singolo</div>
+								<div class="card__body">
+                  <!-- primo cont. -->
+                  <div class="margin-card">
+                    <h2 class="space-line">Professional</h2>
+                    <p class="space-line">€ 12.00</p>
+                    <p class="space-line">/mese</p>
+                  </div>
+                  <!-- secondo cont. -->
+                  <ul class="margin-card ul-icons-1">
+                    <li class="space-line"><i class="fa-solid fa-user"></i> 1 utente</li>
+                    <li class="space-line"><i class="fa-solid fa-folder"></i> 5 TB di spazio di <span class="white">....</span>archiviazione sicuro</li>
+                    <li class="space-line">
+                      <i class="fa-solid fa-share-nodes"></i> Funzioni di produttività <span class="white">....</span>premium e condivisione <span class="white">....</span>file
+                      semplice e sicuro
+                    </li>
+                  </ul>
+                  <!-- terzo cont. -->
+                  <button class="btn margin-card">prova gratis per 30 giorni</button>
+                  <p>oppure <a class="blue" href="#">acquista ora</a></p>
+                  <div class="divisor margin-card"></div>
+                  <!-- quarto cont. -->
+                  <h3 class="margin-card">Punti salienti del piano</h3>
+                  <ul class="margin-card">
+                    <li class="space-line"><i class="fa-solid fa-check"></i> Invia file fino a 100 GB con Dropbox transfert</li>
+                    <li class="space-line"><i class="fa-solid fa-check"></i> Cartelle ofline su dispositivi mobili</li>
+                  </ul>
                 </div>
-                 <div class="radio-container">
-                    <input type="radio" id="option1" value="1">
-                    <label for="option1">Fatturazione mensile</label>
-                    <input type="radio" id="option2" value="2">
-                    <label for="option2">Fatturazione annuale</label>
+							</div>
+						</li>
+            <!-- SECONDA card -->
+						<li class="col-33">
+							<div class="card">
+                <div class="card__header"><i class="fa-solid fa-user"></i> Team</div>
+								<div class="card__body">
+                   <!-- primo cont. -->
+                  <div class="margin-card">
+                    <h2 class="space-line">Avanced</h2>
+                    <p class="space-line">€ 18.00</p>
+                    <p class="space-line">/utente/mese</p>
+                  </div>
+                  <!-- secondo cont. -->
+                  <ul class="margin-card ul-icons-1">
+                    <li class="space-line"><i class="fa-solid fa-user"></i> 3 o più utenti</li>
+                    <li class="space-line"><i class="fa-solid fa-folder"></i> Tutto lo spazio di cui ha <span class="white">.....</span>bisogno il tuo team</li>
+                    <li class="space-line">
+                      <i class="fa-solid fa-share-nodes"></i> <span id="mini">Sofisticate funzioni di <span class="white">....</span>controllo e per tenere al <span class="white">....</span>sicuro tutti i file del tuo team</span>
+                    </li>
+                  </ul>
+                  <!-- terzo cont. -->
+                  <div class="margin-card">
+                    <button class="btn margin-card">prova gratis per 30 giorni</button>
+                    <p>oppure <a class="blue" href="#">acquista ora</a></p>
+                  </div>
+                  <div class="divisor"></div>
+                  <h3 class="margin-card">Punti salienti del piano</h3>
+                  <!-- quarto cont. -->
+                  <ul class="margin-card">
+                    <li class="space-line"><i class="fa-solid fa-check"></i> nessun limite di spazio per i file</li>
+                    <li class="space-line"><i class="fa-solid fa-check"></i> Cartelle offline su dispositivi mobili</li>
+                    <li class="space-line"><i class="fa-solid fa-check"></i> Risparmio del 50% rispetto alle iscrizioni singole</li>
+                    <li class="space-line"><i class="fa-solid fa-check"></i> Possibilità di inserire nuovi membri del team</li>
+                    <li class="space-line"><i class="fa-solid fa-check"></i> Gestione dei permessi in base ai ruoli</li>
+                  </ul>
                 </div>
-            </div>
-        </div>
-        <div class="container special">
-            <div class="row">
-                <div class="col-33 long ">
-                    <div class="border">
-                        <div class="">
-                            singolo
-                        </div>
-                        <h2>Professional</h2>
-                        <p>€ 12.00</p>
-                        <p>/mese</p>
-                        <ul>
-                            <li>1 utente</li>
-                            <li>5 TB di spazio di archiviazione sicuro</li>
-                            <li>funzioni di produttività premium e condivisione file semplice e sicuro</li> 
-                        </ul>
-                        <button class="def-buttons">prova gratis per 30 giorni</button>
-                        <p>oppure <a href="#">acquista ora</a></p>
-                        <hr>
-                        <h3>Punti salienti del piano</h3>
-                        <ul>
-                            <li>Invia file fino a 100 GB con Dropbox transfert</li>
-                            <li>Cartelle ofline su dispositivi mobili</li>
-                        </ul>
+              </div>
+						</li>
+            <!-- terza card -->
+						<li class="col-33">
+							<div class="card">
+                <div class="card__header"><i class="fa-solid fa-user"></i> Azienda</div>
+								<div class="card__body">
+                  <div class="margin-card">
+                    <h2 class="space-line">Enterprise</h2>
+                    <p class="space-line">Contattaci</p>
+                    <p class="space-line">-</p>
+                  </div>
+                  <ul class="margin-card ul-icons-1">
+                    <li class="space-line"><i class="fa-solid fa-user"></i> 10 o più utenti</li>
+                    <li class="space-line"><i class="fa-solid fa-folder"></i> Soluzuioni personalizzabili <span class="white">.....</span>per la tua azienda</li>
+                    <li class="space-line">
+                      <i class="fa-solid fa-share-nodes"></i> Assistenza personalizzata <span class="white">....</span>per aiutare gli aministratori <span class="white">....</span>in una gestione su larga scala
+                    </li>
+                  </ul>
+                  <button class="btn margin-card">Contattaci</button>
+                  <p>oppure <a class="blue" href="#">acquista ora</a></p>
+                  <div class="divisor margin-card "></div>
+                  <h3>Punti salienti del piano</h3>
+                  <ul class="margin-card">
+                    <li class="space-line"><i class="fa-solid fa-check"></i> Cartelle offline su dispositivi mobili</li>
+                    <li class="space-line"><i class="fa-solid fa-check"></i> Servizio assistenza 24 ore</li>
+                    <li class="space-line"><i class="fa-solid fa-check"></i> Possibilità di personalizzazione totale</li>
+                  </ul>
+                </div>
+              </div>
+						</li>
+            <!-- quarta card -->
+						<li class="col-100">
+							<div class="card" id="card-4">
+                <div class="card__header"><i class="fa-solid fa-user"></i> Team</div>
+								<div class="row">
+                  <div class="col-66">
+                    <div class="margin-card">
+                      <h2>Enterprise</h2>
                     </div>
+                    <strong><p>Contatta l'ufficio vendite per i prezzi</p></strong>
+                  <div>Soluzioni personalizzate supporto su misura per aiutare i professionisti IT nella gestione su qualsiasi scala.</div>
+                  </div>
+                  <div class="col-33">
+                    <button class="btn margin-card">Contatta l'ufficio vendite</button>
+                  </div>
                 </div>
-                <div class="col-33 long">ciao</div>
-                <div class="col-33 long">ciao</div>
-                <div class="col-100">ciao</div>
-            </div>
+              </div>
+						</li>
+					</ul>
+				</div>
+			</section>
+      <section>
+        <div class="container">
+          <div class="row">
+            
+          </div>
         </div>
       </section>
     </main>
